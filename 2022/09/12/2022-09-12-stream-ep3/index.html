@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="Zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="YZY">
+
+
+
+
+
+<title>Stream Content Ep3 | Zxiro</title>
+
+
+
+    <link rel="icon" href="/favicon.svg">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Zxiro&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Zxiro&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Stream Content Ep3</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">九月 12, 2022&nbsp;&nbsp;0:00:00</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寫影視串流內容筆記寫了 1Q，這次來收斂一下自己的 mindset 。跟週遭人提到有在做這個小 Hobby 的時候其實有部分是在審視內心為何要做這件事，但跟熟人描述反而很難從 outside box 檢視我的行為邏輯。某次嘗試與不認識ㄉ網友口頭描述這件事時才發現其實我不著重於劇情或是情節邏輯設定的分享，我更在意的是看完作品後由我的人生歷程為基礎去詮釋它 (更新神經元權重)。（容我吊一下書袋）所以我認為我寫的內容應該蠻大一部分會是像 詮釋學 羅蘭。巴特 的 ”作者已死“ 概念為核心發展。這位名家也是徹底超出我的守備範圍，總的來說我會更注重作品的開放性，並認為閱聽者的解釋是與作者平行，以這些原則來去紀錄我看ㄉ東西。（所以要一個高中生去猜作者寫那段話的心路歷程是應該是超出那個年紀該做的事，感謝學測國文&#x3D;&#x3D;）</p>
+<h2 id="Netflix"><a href="#Netflix" class="headerlink" title="Netflix"></a>Netflix</h2><h3 id="Better-Call-Saul-Full-Season-1-2"><a href="#Better-Call-Saul-Full-Season-1-2" class="headerlink" title="Better Call Saul Full Season 1&amp;2"></a>Better Call Saul Full Season 1&amp;2</h3><p>整部六季，雖然我是 Breaking Bad 的粉絲，但還是等到整部完結網路評論全過關才看。對這部的期待會更著重於角色性格的轉變與塑造，像相較於 BB 可預見的會少更多血脈噴張的場景。不過喜歡上 Vince Gilligan 的作品本身就不是期待有毒梟火拼的場景，而是畫面與劇情的設計讓觀眾融入進角色的內心。寫到這裡才知道為何這麼喜歡這風格，確實在看到一半的時候就會將自己帶入進角色，沒有過多配樂跟解釋性對話，更多是從眼睛觀察以及意識流來去跟進劇情發展。在已經知道劇中兩大主角(行筆之時)的 Jimmy 跟 Mike 在 BB 的發展前提下， Better Call Saul 需要更努力去建立這兩位角色的心路歷程。看完前兩季，Jimmy 跟 Mike 跟 BB 裡面仿佛兩個不同角色（還是四個），立體鮮明的性格，角色之間以及內心的價值觀、衝突，都讓我想趕快看完，但又覺得開 1.25 很浪費，就像某集 Jimmy 與 Charles 的對手戲不小心快轉覺得很遺憾，六季每集很長，真ㄉ讚。</p>
+<h3 id="讓子彈飛-Full-Movie"><a href="#讓子彈飛-Full-Movie" class="headerlink" title="讓子彈飛 Full Movie"></a>讓子彈飛 Full Movie</h3><p>不用說的經典之作，台詞經典程度相信就算沒看過的人也有聽過。如同前言所述，我認為這部經典就在明顯的政治隱喻以及各方解讀的自由性。張牧之代表的有志之士、黃四郎代表的權貴階級、師爺代表的趨炎附勢之人。黃四郎家中的鴻門宴我認為是整部之中最為過癮之處，鏡頭像是放在中式飯桌上的大轉盤，快速地切換三位角色。仿佛將觀眾帶進難以喘過氣的明爭暗鬥，在客套以及觥籌交錯之時卻是暗流湧動，張牧之跟黃四郎互探底細，師爺評估雙方勢力。這段三人飆戲是我最喜歡的部分。六子之死、跪著要飯、麻匪叛變、拿槍的人民等待贏家、上海就是浦東、浦東就是上海。很明顯可以想到中國近代政治的壓迫、悲哀以及命定輪迴，也不可能不侷限於中國。讓子彈飛這尾中國廣電局的漏網之魚成就了華語圈的影音創作巔峰，十分推薦觀賞，即使不想深究什麼政治隱喻或是鏡頭語言等，詼諧荒謬的劇情還有洗練的台詞或許也能帶來一些快樂的哀傷。</p>
+<h3 id="Ex-Machina-Full-Movie"><a href="#Ex-Machina-Full-Movie" class="headerlink" title="Ex_Machina Full Movie"></a>Ex_Machina Full Movie</h3><p>A24 製作的英國獨立電影，看完後才發現原來沒有在臺灣上院線片。內容是一位工程師要去測試 AI 是否能通過圖靈測試 (Turing Test)，這部是驚悚外皮的哲學探討片。在 2022，&lt;&lt;LaMDA: Language Models for Dialog Applications&gt;&gt; Google 發表的這咖 137B 參數的語言模型我認為高機率能夠通過傳統的圖靈測試，也就是測試者分辨不出來是在跟人還是電腦說話。但這部片並非在探討電腦能否思考，而是是否具有意識（以下參考&lt;&lt;泛科學 《人造意識》中的機器人艾娃，具有個人意識嗎？&gt;&gt;）電腦能夠快速學習、紀錄能夠被量化的物理知識，例如可能遇到某些情境的腦電波反映對應到人類的快樂等，但當這腦電波規律產生之時電腦能夠理解或是同理這種”感覺”嗎？也就是電影中提到的黑白瑪麗實驗，當一個人在黑白房間學習完了所有顏色產生以及接受的原理，當他接觸到全彩環境時會有別的 “主觀認知” 嗎？對於 AI 我的恐懼應該只有 GitHub 的 Copilot (純語句描述能夠轉換成完成任務的程式碼 ） 越來越強ㄌ Nvidia 甚至還用到了 IC Design 的 Process 中，所以在討論何謂意識認知之前，我更擔心我會流落街頭 ;(</p>
+<h2 id="HBO-Go"><a href="#HBO-Go" class="headerlink" title="HBO Go"></a>HBO Go</h2><h3 id="V-for-Vendetta-Full-Movie"><a href="#V-for-Vendetta-Full-Movie" class="headerlink" title="V for Vendetta Full Movie"></a>V for Vendetta Full Movie</h3><p>當初以為能在 HBO Go 上看到黑袍糾察隊所以就跟了團，後來發現原來是在我之前買來只看福音戰士新劇場版的 Amazon Prime Video （這種搶版權的串流影音大戰實在令人困擾，是不是串流影音這塊產業高度競爭不會為消費者帶來好處，畢竟每個人所擁有的時間是固定的。）總之看到 HBO 上比 Amazon 還少的片就覺得不如去買手搖飲。但 V 怪客 + R&amp;M 算是抵掉未來半年的 HBO 消費吧（引言 murmur 好多）。這部是無政府主義 vs 法西斯主義的一部片，強調在一個政府高度管控言論思想的架空英國社會下，思想家 V 帶領的革命。在高度數位化的現今，我認為人們很難百分之百信任政府會&#x2F;不會與大公司或是利用國營事業管控資訊。近幾年的政府擴權似乎缺乏能有效監督遏制的制度或力量。當政府能夠要求你戴口罩就能要求你打疫苗、’完整’接種後還要有加強劑，美國政府從不與恐怖份子談判，因為有了先例就會成為通則。當然上述是邏輯滑坡，我是想提到在看完這部片後開始思考政府權力與個人權利的邊界。在政府能力透過數位化大幅提升的同時，如何改善民主制度的缺失，進而增加制衡的手段我認為是現代社會要去努力的。這部沒有過多動作劇，表現的是 V 喚醒人們（劇中是女主）對於自身權力的追求，V 最後的 “信念能夠抵禦子彈”，只能說帥的一塌糊塗。</p>
+<h3 id="Rick-Morty-Season-6-Episode-1"><a href="#Rick-Morty-Season-6-Episode-1" class="headerlink" title="Rick &amp; Morty Season 6 Episode 1"></a>Rick &amp; Morty Season 6 Episode 1</h3><p>放這部只是要提 R&amp;M IS BACKKK，Rick 在 S5 的神性消退增添未來幾季的可看性（雖然本來就不需要再增加）。期待在 S6-S7 兩季內可以結束 C-137 Rick 的恩怨情仇。當然做單元劇我也是很買單ㄉ。</p>
+<h2 id="Podcast"><a href="#Podcast" class="headerlink" title="Podcast"></a>Podcast</h2><p>本月沒有心力聽財金的 PodCast QQ，原本還想說要研究 Ethereum (ETH MainNet)合併，因為現在也是滿手ETH ;(</p>
+<h2 id="Spotify"><a href="#Spotify" class="headerlink" title="Spotify"></a>Spotify</h2><h3 id="公佈過ㄌ，多偷渡一首"><a href="#公佈過ㄌ，多偷渡一首" class="headerlink" title="公佈過ㄌ，多偷渡一首"></a>公佈過ㄌ，多偷渡一首</h3><ul>
+<li>那些事情是真的有意思嗎 Made By 當代電影大師</li>
+<li>我常常有一種感覺 Made By 當代電影大師</li>
+<li>我不想聽我不想聽被寵壞的搖滾明星 Made By 當代電影大師</li>
+<li>半眠 Made By 孩子王</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2022/10/12/2022-10-12-stream-ep4/">Stream Content Ep4</a>
+            
+            
+            <a class="next" rel="next" href="/2022/08/12/2022-08-12-crypto-invest-ep1/">Crypto & Invest Ep1 加密協議的架構重置</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© YZY | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
